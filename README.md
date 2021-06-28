@@ -1,6 +1,6 @@
 # Budgetapp
 
-## Built a BudgetApp with the help of Angular, Bootstrap (for all ui) and AngularMaterial (for edit modal only).
+## Built a BudgetApp with the help of Angular, Bootstrap (for UI) and AngularMaterial (for edit modal only).
 
 
 # Features:-
