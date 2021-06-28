@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid d-flex justify-content-center">
+    <div class="navbar-brand">
+      Budget Calculator
+  </div>
+  </div>
+</nav>
+
+<div class="d-flex justify-content-center align-items-center" style="height: 150px; background-color: lightskyblue;">
+
+  <h1 style="color:black">{{totalBudget}}</h1>
+</div>
+
+
+
+
+<app-add-item [new]="true" (formSubmit)="addItem($event)"></app-add-item>
+
+ <app-item-list (update)="updateItem($event)" (delete)="deleteItem($event)"
+   (edit)="editItem($event)" (idx)="getIdx($event)"     [budgetItems]="budgetItems"></app-item-list>
+
+
+
+

@@ -1,0 +1,34 @@
+<div class="container-fluid d-flex justify-content-center w-100">
+  <div class="row w-100 justify-content-center">
+    <div class="col col-md-4 text-center">
+      <h2 class="text-center mb-3" style="color: green;">Income</h2>
+
+
+      <div class="budget-items">
+      <div *ngFor="let item of budgetItems">
+        <app-budget-item-card *ngIf="item.amount>=0" [item]="item" (delete)="ondeleteitem(item)"
+            (edit)="editItem($event)" (idx)="sendIdx($event)" (cardClick)="oncardClicked(item)"
+      >
+
+        </app-budget-item-card>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="col col-md-4  text-center">
+  <h2 class="text-center mb-3" style="color: red;">Expenses</h2>
+
+  <div class="budget-items">
+    <div *ngFor="let item of budgetItems">
+      <app-budget-item-card *ngIf="item.amount<0" [item]="item" (delete)="ondeleteitem(item)" (cardClick)="oncardClicked(item)"
+      (edit)="editItem($event)" (idx)="sendIdx($event)"
+      ></app-budget-item-card>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+

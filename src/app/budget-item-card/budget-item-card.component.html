@@ -1,0 +1,19 @@
+<div class="main bg-light  p-2 mb-2">
+
+
+  <div (click)="oncardClick()"  class="budget-item d-flex  justify-content-between align-items-center" [ngClass]="{'income' : item.amount>=0, 'expenses': item.amount<0}">
+  <div class="Description" (click)="sendIdx(item)">
+  <p class="m-0">{{item.description}}</p>
+  </div>
+
+  <div class="amount d-flex justify-content-center align-items-center">
+  <span class="m-0 me-2">{{item.amount}}</span>
+  <span (click)="ondeleteButoon()" class=" rounded-circle " style="cursor: pointer;"><img src="../../assets/delete_icon.svg"></span>
+  </div>
+  </div>
+
+</div>
+
+
+
+
